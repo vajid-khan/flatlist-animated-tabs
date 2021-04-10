@@ -9,27 +9,27 @@ const {width, height} = Dimensions.get('window')
 const DATA = [
 	{
 		title: 'abstract',
-		img: require('./images/abstract.jpg')
+		img: require('../../images/abstract.jpg')
 	},
 	{
 		title: 'animal',
-		img: require('./images/animal.jpg')
+		img: require('../../images/animal.jpg')
 	},
 	{
 		title: 'ice',
-		img: require('./images/ice.jpg')
+		img: require('../../images/ice.jpg')
 	},
 	{
 		title: 'mountains',
-		img: require('./images/mountain.jpg')
+		img: require('../../images/mountain.jpg')
 	},
 	{
 		title: 'girl',
-		img: require('./images/girl.jpg')
+		img: require('../../images/girl.jpg')
 	},
 ];
 
-const App = (props) => {
+const TabBarFlatList = () => {
 	
 	const containerRef = useRef();
 	const flatListRef = useRef();
@@ -82,6 +82,7 @@ const App = (props) => {
 				pagingEnabled
 				bounces={false}
 				onScroll={onScroll}
+                showsHorizontalScrollIndicator={false}
 				keyExtractor={item=> item.title}
 				renderItem = {({item}) => {
 					return (
@@ -127,6 +128,7 @@ const App = (props) => {
 						style={[{
 							height:2,
 							borderRadius:3,
+                            width: 0,
 							backgroundColor:'#fff',
 						},style]}
 					/>
@@ -136,4 +138,4 @@ const App = (props) => {
 		</View>
 	)
 }
-export default App;
+export {TabBarFlatList};

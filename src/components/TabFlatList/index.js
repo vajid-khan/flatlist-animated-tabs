@@ -1,0 +1,1 @@
+export {TabBarFlatList} from './TabBarFlatlist'
