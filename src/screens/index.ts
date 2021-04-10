@@ -1,0 +1,1 @@
+export {TabBarFlatList as TabBarFlatListScreen} from '../components/TabFlatList'

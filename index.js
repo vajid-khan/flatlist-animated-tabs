@@ -3,6 +3,10 @@
  */
 
 import {AppRegistry} from 'react-native';
-import {TabBarFlatList} from './src/components/TabFlatList';
+import App from './src/App';
 import {name as appName} from './app.json';
-AppRegistry.registerComponent(appName, () => TabBarFlatList);
+import { enableScreens } from 'react-native-screens';
+
+enableScreens();
+
+AppRegistry.registerComponent(appName, () => App);
