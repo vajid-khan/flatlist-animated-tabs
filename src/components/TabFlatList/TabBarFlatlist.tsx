@@ -31,8 +31,8 @@ const DATA = [
 
 const TabBarFlatList = () => {
 	
-	const containerRef = useRef();
-	const flatListRef = useRef();
+	const containerRef = useRef<View>();
+	const flatListRef = useRef<FlatList>();
 	const scrollX = useSharedValue(0);
 	const [measures, setMeasures] = useState([]);
 	const indicatorsRef = DATA.map(_=> useRef());
@@ -41,7 +41,7 @@ const TabBarFlatList = () => {
 		setTimeout(() => {
 			const _measures = [];
 			indicatorsRef.map(ref => {
-				ref.current.measureLayout(containerRef.current, (x,y, width) => {
+				ref?.current.measureLayout(containerRef.current, (x,y, width) => {
 					_measures.push({
 						x,y,width
 					});
@@ -83,7 +83,7 @@ const TabBarFlatList = () => {
 				bounces={false}
 				onScroll={onScroll}
                 showsHorizontalScrollIndicator={false}
-				keyExtractor={item=> item.title}
+				keyExtractor={item => item.title}
 				renderItem = {({item}) => {
 					return (
 						<View
