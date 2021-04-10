@@ -1,1 +1,2 @@
-export {TabBarFlatList as TabBarFlatListScreen} from '../components/TabFlatList'
+export {TabBarFlatListScreen} from '../components/TabFlatList'
+export {FlipScreen} from '../components/flip'

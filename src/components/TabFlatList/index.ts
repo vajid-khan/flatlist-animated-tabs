@@ -1,1 +1,1 @@
-export {TabBarFlatList} from './TabBarFlatlist'
+export {TabBarFlatList as TabBarFlatListScreen} from './TabBarFlatlist'
